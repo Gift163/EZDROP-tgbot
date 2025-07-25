@@ -26,24 +26,15 @@ async def start_handler(message: Message):
         InlineKeyboardButton("👥 Invite Friends", callback_data="referral")
     )
 
-    welcome_text = (
-        "👋 Welcome to *EZDROP*, {}!
-
-"
-        "🎮 Play & win real tokens and NFTs right inside Telegram.
-
-"
-        "💎 Open daily cases
-"
-        "⚡ Upgrade items
-"
-        "🎯 Complete missions
-"
-        "👑 Earn ranks & rewards
-
-"
-        "Ready to drop? Let’s go! 🚀"
-    )
+   welcome_text = (
+    "👋 Welcome to *EZDROP*, {}!\n\n"
+    "🎮 Play & win real tokens and NFTs right inside Telegram.\n\n"
+    "💎 Open daily cases\n"
+    "⚡ Upgrade items\n"
+    "🎯 Complete missions\n"
+    "👑 Earn ranks & rewards\n\n"
+    "Ready to drop? Let’s go! 🚀"
+)
 
     await message.answer(welcome_text.format(message.from_user.first_name), reply_markup=keyboard, parse_mode="Markdown")
 
